@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Axial Seamount</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" type="text/css"> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" type="text/css">
+
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='img/bloom.jpeg') }}");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-color: rgba(255, 255, 255, 0.3);
+            background-blend-mode: overlay;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-auto">
+                <h1>Axial Seamount Data Visualization</h1>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <form role="form" action="/", method="post">
+                    <div class="card-header">
+                        <h5 class="title">Select Data to Visualize</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-row">
+                        <div class="col-md-2 pr-md-1">
+                            <div class="form-group">
+                            {{ query_form.hidden_tag() }}
+                            <label>{{ query_form.start_date.label }}:</label>
+                            {{ query_form.start_date(class_='form-control') }}
+                            </div>
+                        </div>
+                        <div class="col-md-2 pl-md-1">
+                            <div class="form-group">
+                            <label>{{ query_form.end_date.label }}:</label>
+                            {{ query_form.end_date(class_='form-control') }}
+                            </div>
+                        </div>
+                        <div class="col-md-2 pl-md-1">
+                            <div class="form-group">
+                            <label>{{ query_form.select_var.label }}:</label>
+                            {{ query_form.select_var(class_='form-control') }}
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" name="plot_data" class="btn btn-fill btn-primary">Plot Data</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
