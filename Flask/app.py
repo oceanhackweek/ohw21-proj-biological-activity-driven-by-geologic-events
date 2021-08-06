@@ -23,7 +23,10 @@ e_databases = {
     'sea_water_practical_salinity': 'ooi-rs03axps-pc03a-4a-ctdpfa303',
     'mole_concentration_of_dissolved_molecular_oxygen_in_sea_water': 'ooi-rs03axps-pc03a-4a-ctdpfa303',
     'sea_water_density': 'ooi-rs03axps-pc03a-4a-ctdpfa303',
-    'sea_water_pressure': 'ooi-rs03axps-pc03a-4a-ctdpfa303'
+    'sea_water_pressure': 'ooi-rs03axps-pc03a-4a-ctdpfa303',
+    'mole_concentration_of_nitrate_in_sea_water_profiler_depth_enabled': 'ooi-rs03axps-sf03a-4a-nutnra301',
+    'partial_pressure_of_carbon_dioxide_in_sea_water_profiler_depth_enabled': 'ooi-rs03axps-sf03a-4f-pco2wa301',
+    'downwelling_photosynthetic_photon_flux_in_sea_water_profiler_depth_enabled': 'ooi-rs03axps-sf03a-3c-parada301'
 }
 
 
